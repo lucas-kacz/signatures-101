@@ -91,7 +91,7 @@ contract Evaluator {
     public 
     {
         bytes32 stringToSignToGetPoint = 0x00000000596f75206e65656420746f207369676e207468697320737472696e67;
-
+    
         // If tx fails here, it means the transaction did not receive a valid signature
         address signatureSender = extractAddress(stringToSignToGetPoint , _signature);
         require(tx.origin == signatureSender, "signature does not match tx originator");
